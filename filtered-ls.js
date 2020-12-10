@@ -1,8 +1,10 @@
 const fs = require('fs')
-var path = process.argv[2];
+const path=require('path')
+
+var folder = process.argv[2];
 var extension = '.' + process.argv[3]
 
-fs.readdir(path,  (err, files) => {
+fs.readdir(folder,  (err, files) => {
     if (err)  console.log(err)
     else {
     files.forEach( file => {

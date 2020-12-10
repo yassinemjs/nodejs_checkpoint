@@ -1,6 +1,4 @@
-var res = 0
 
-for (var i = 2; i < process.argv.length; i++)
-  res += Number(process.argv[i])
-
-console.log(res)
+let arr = process.argv.slice(2).map(Number)
+let res=arr.filter(x => x).reduce((x,y) => x+y)
+console.log(res) 
